@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Elegance Age Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+    
+<script>
+      // Retrieve a parameter value from the URL
+      function getQueryParam(param) {
+        let urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Save relevant parameters to Local Storage
+      function saveSubIDs() {
+        let subid = getQueryParam('subid');
+        let subid2 = getQueryParam('subid2');
+        let subid3 = getQueryParam('subid3');
+        let subid4 = getQueryParam('subid4');
+        let subid5 = getQueryParam('subid5');
+
+        if (subid) localStorage.setItem('subid', subid);
+        if (subid2) localStorage.setItem('subid2', subid2);
+        if (subid3) localStorage.setItem('subid3', subid3);
+        if (subid4) localStorage.setItem('subid4', subid4);
+        if (subid5) localStorage.setItem('subid5', subid5);
+      }
+
+      // Append saved IDs to links on the page
+      function appendSubIDsToLinks() {
+        let subid = localStorage.getItem('subid');
+        let subid2 = localStorage.getItem('subid2');
+        let subid3 = localStorage.getItem('subid3');
+        let subid4 = localStorage.getItem('subid4');
+        let subid5 = localStorage.getItem('subid5');
+
+        document.querySelectorAll('a').forEach(link => {
+          let url = new URL(link.href);
+          if (subid) url.searchParams.set('subid', subid);
+          if (subid2) url.searchParams.set('subid2', subid2);
+          if (subid3) url.searchParams.set('subid3', subid3);
+          if (subid4) url.searchParams.set('subid4', subid4);
+          if (subid5) url.searchParams.set('subid5', subid5);
+
+          link.href = url.toString();
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        saveSubIDs();
+        appendSubIDsToLinks();
+      });
+    </script>
+    <style>
+    body {
+        font-family: 'Source Sans Pro', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #273c75; /* Deep navy for a solid, dependable background */
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+        color: #f5f6fa; /* Soft cream for text, professional yet warm */
+    }
+
+    h1, p, .timer, .time, .btn, footer, .footer-link a {
+        font-weight: 700;
+    }
+
+    h1 {
+        color: #c0392b; /* Rich burgundy for headers, elegant and powerful */
+        font-size: 3.5em;
+    }
+
+    p {
+        font-size: 1.8em;
+        margin: 10px 0;
+        color: #f5f6fa; /* Soft cream for body text, crisp and clear */
+    }
+
+    .timer {
+        font-size: 2em;
+        margin: 20px 0;
+        color: #e1b12c; /* Gold for the timer, striking and consistent */
+    }
+
+    .time {
+        color: #e1b12c; /* Matching the timer color */
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 1.8em;
+        color: #273c75; /* Deep navy text for striking contrast */
+        background-color: #c0392b; /* Rich burgundy for buttons, inviting and bold */
+        text-align: center;
+        text-decoration: none;
+        border-radius: 12px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .btn:hover {
+        background-color: #a93226; /* Darker shade of burgundy for hover, adding depth */
+    }
+
+    footer {
+        width: 100%;
+        background-color: #192a56; /* Dark navy to complement the body */
+        color: #f5f6fa; /* Soft cream for footer text, keeping the theme consistent */
+        padding: 20px;
+        box-sizing: border-box;
+        display: none;
+    }
+
+    .footer-link a {
+        color: #e1b12c; /* Gold for links, maintaining the luxurious theme */
+        text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+    <h1>Age Verification</h1>
+    <p>Please verify your age to continue.</p>
+    <div class="timer">
+        Time left: <span class="time" id="time">0:15</span>
+    </div>
+    <a href="https://www.youtube.com/watch?v=cEnRKTcEfp4" class="btn">Proceed</a>
+
+    <footer id="footer">
+        <div class="footer-link">
+            <a href="https://page1.thegoodhealht.online/privacy-policy/">Privacy Policy</a> |
+            <a href="https://page1.thegoodhealht.online/terms/">Terms of Use</a> |
+            <a href="https://page1.thegoodhealht.online/contact/">Contact Us</a>
+        </div>
+    </footer>
+
+    <script>
+        var time = 15;
+        var timerElement = document.getElementById('time');
+        var interval = setInterval(function() {
+            var minutes = Math.floor(time / 60);
+            var seconds = time % 60;
+            timerElement.textContent = minutes + ':' + (seconds < 10 ? '0' + seconds : seconds);
+            time--;
+
+            if (time <= 0) {
+                clearInterval(interval);
+                timerElement.textContent = "Time expired";
+                timerElement.style.color = "#FF1744"; /* Adding a red color for expiration alert */
+            }
+        }, 1000);
+
+        setTimeout(() => {
+            document.getElementById('footer'). style.display = 'block';
+        }, 1800000); // Delay footer visibility for 30 minutes
+    </script>
+</body>
+</html>
