@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vital Vigor</title>
+    <meta
+      name="description"
+      content="Discover the ultimate guide to male vitality with Vital Force. Uncover proven techniques, expert tips, and transformational strategies for renewed energy, confidence, and peak performance."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(135deg, #1a2a6c, #0b3a77);
+        padding: 1rem 2rem;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #1a2a6c, #1f83b2, #210769);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 6rem 2rem;
+        color: white;
+      }
+
+      .hero-content {
+        max-width: 800px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      /* Buttons */
+      .cta-button,
+      .checkout-button {
+        display: inline-block;
+        padding: 1.2rem 2.4rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background: linear-gradient(45deg, #714eff, #1d9b64);
+        border-radius: 50px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 1rem 0;
+      }
+
+      .cta-button:hover,
+      .checkout-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Benefits Section */
+      .benefits {
+        padding: 5rem 2rem;
+        background: white;
+      }
+
+      .benefits h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #1a2a6c;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .benefit-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .benefit-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .benefit-card h3 {
+        color: #1a2a6c;
+        margin-bottom: 1rem;
+      }
+
+      /* Guarantee Section */
+      .guarantee {
+        background: linear-gradient(45deg, #2193b0, #6dd5ed);
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .guarantee-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Pricing Section */
+      .pricing {
+        padding: 5rem 2rem;
+        background: #f8f9fa;
+      }
+
+      .price-card {
+        max-width: 500px;
+        margin: 0 auto;
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .price {
+        margin: 2rem 0;
+      }
+
+      .original {
+        display: block;
+        text-decoration: line-through;
+        color: #666;
+        font-size: 1.2rem;
+      }
+
+      .current {
+        display: block;
+        color: #1a2a6c;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-top: 0.5rem;
+      }
+
+      /* NEW PRODUCT IMAGE SECTION */
+      .product-image {
+        height: auto;
+        margin: 1.5rem 0;
+      }
+
+      .product-image img {
+        max-width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .features {
+        list-style: none;
+        margin: 2rem 0;
+        text-align: left;
+      }
+
+      .features li {
+        margin: 1rem 0;
+        color: #444;
+      }
+
+      .secure-payment {
+        margin-top: 2rem;
+        color: #666;
+      }
+
+      /* Footer */
+      footer {
+        background: #1a2a6c;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      /* Responsiveness */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .subtitle {
+          font-size: 1.2rem;
+        }
+
+        .benefits-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .price-card {
+          padding: 2rem;
+          margin: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Vital Vigor</div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Discover the Secret to Male Vitality</h1>
+          <p class="subtitle">
+            Transform your life with our comprehensive guide to better
+            performance and energy
+          </p>
+          <a href="#pricing" class="cta-button"
+            >I WANT TO TRANSFORM MY LIFE NOW</a
+          >
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="price-card">
+          <h2>Special Offer</h2>
+          <div class="price">
+            <span class="original">Was $30.95</span>
+            <span class="current">Now $17.30</span>
+          </div>
+
+          <!-- NEW PRODUCT IMAGE SECTION -->
+          <div class="product-image">
+            <img src="book.jpg" alt="Product Image" />
+          </div>
+          <!-- END NEW PRODUCT IMAGE SECTION -->
+
+          <ul class="features">
+            <li>✓ Complete E-Book</li>
+            <li>✓ Lifetime Access</li>
+            <li>✓ Exclusive Bonuses</li>
+            <li>✓ Premium Support</li>
+          </ul>
+          <a
+            href="http://amazon.com/dp/B0CRQ4HHVH/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B0CRQ4HHVH&pd_rd_w=mgIqV&content-id=amzn1.sym.7446a9d1-25fe-4460-b135-a60336bad2c9&pf_rd_p=7446a9d1-25fe-4460-b135-a60336bad2c9&pf_rd_r=2WBPSPZ32GH6C1RQKY8K&pd_rd_wg=WkbR2&pd_rd_r=14dbb74c-8e31-4dcb-8757-7d6fcb106adf&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw"
+            class="checkout-button"
+          >
+            BUY NOW
+          </a>
+          <div class="secure-payment">
+            <p>🔒 100% Secure Payment</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          Copyright 2025. All rights reserved. 
+          <br>
+          DISCLAIMER: This site is not affiliated with Google or any Google entity. Once you leave Google, it is not their responsibility but our website’s. 
+          <br>We make every effort to clearly state and show all real product proofs and use real results. We do not sell your email or any information to third parties. We never do any type of spam. 
+          <br>If you have any questions, please feel free to use the contact link and speak to us during business hours Monday to Friday 9am to 6pm. We read and respond to all messages in order of arrival.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
